@@ -1,0 +1,24 @@
+<div class="card card-small">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Max Dvorak</mat-card-title>
+          <mat-card-subtitle>FrontEnd Angular Developer</mat-card-subtitle>
+          <img mat-card-md-image src="../../../assets/my-photo.jpg"  alt="photo">
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <p>So, my name is Max. I'm a citizen of a beautiful city Rivne. I'm a student of National University of Water and Environmental Engineering.
+          I'm very friendly and outgoing person. I love to play and watch football, to play chess, and i'm also a big fan of cardboard games. And i also play drums.
+        </p>
+        <p *ngFor="let info of additionalInfo$ | async">{{ info }}</p>
+      </mat-card-content>
+      <a href="https://www.instagram.com/max.dvorak/" target="_blank" rel="noopener noreferrer" class="link-insta">
+        <button mat-icon-button > 
+          <mat-icon>
+            <img class="image-inst" src="https://www.svgrepo.com/show/308994/instagram-social-media.svg" alt="insta">
+          </mat-icon>
+        </button>
+      </a>
+    </mat-card>
+  </div>

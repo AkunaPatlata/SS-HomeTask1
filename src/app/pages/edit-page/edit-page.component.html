@@ -1,0 +1,16 @@
+<form class="example-form" fxLayout="column" fxLayoutAlign="space-between center" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Here you can add some more info about Max to all cards</h1>
+    <mat-form-field class="example-full-width">
+      <mat-label>Information</mat-label>
+      <input type="text" formControlName="info" matInput [errorStateMatcher]="matcher" placeholder="Enter information">
+      <mat-error *ngIf="form.get('info')?.hasError('required')">
+        Information is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="form.get('info')?.hasError('minlength')">
+        Information should be at least <strong>10 characters</strong>
+      </mat-error>
+    </mat-form-field>
+    
+    <button mat-stroked-button color="primary" class="submit-button" type="submit">Add</button>
+</form>
+

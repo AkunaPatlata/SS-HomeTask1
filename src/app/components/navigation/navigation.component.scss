@@ -1,0 +1,44 @@
+.nav-bar{
+    // position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    // height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // color: white;
+    // background-color: gray;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.links{
+    margin-right: 1.5rem;
+}
+
+.small-icons{
+    margin-right: -1rem;
+}
+
+.links-small{
+    margin-right: 0.8rem;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+h1 {
+    margin: 0;
+}
+
+.nav-header{
+    right: 0;
+    left: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

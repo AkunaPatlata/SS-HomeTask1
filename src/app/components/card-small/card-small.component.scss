@@ -1,0 +1,38 @@
+
+  
+.example-header-image {
+    background-image: url('../../../assets/my-micro-photo.jpg');
+    background-size: cover;
+  }
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.card-content{
+  margin-top: 10px;
+}
+
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.link-insta{
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.image-inst{
+  height: 24px;
+}
+
+.photo{
+  width: 50px;
+}
+
+.example-card {
+  max-width: 400px;
+  margin-bottom: 8px;
+}
