@@ -1,7 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
-import { OnInit, AfterViewInit } from '@angular/core';
-import { MediaChange, MediaObserver } from '@angular/flex-layout';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',

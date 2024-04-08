@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Select, Store } from '@ngxs/store';
+import { Component } from '@angular/core';
+import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { AdditionalInfoState } from '../../states/additional-info.state';
 

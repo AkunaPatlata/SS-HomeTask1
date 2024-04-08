@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Store } from '@ngxs/store';
-import { AddAdditionalInfo } from '../../states/additional-info.state.actions';
+import { AddAdditionalInfo } from '../../states/additional-info.actions';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 

@@ -1,5 +1,5 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-import { AddAdditionalInfo } from './additional-info.state.actions';
+import { AddAdditionalInfo } from './additional-info.actions';
 import { Injectable } from '@angular/core';
 
 export class AdditionalInfoStateModel {
