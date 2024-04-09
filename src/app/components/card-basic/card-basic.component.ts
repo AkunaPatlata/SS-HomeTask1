@@ -10,10 +10,10 @@ import { AdditionalInfoState } from '../../states/additional-info.state';
 })
 export class CardBasicComponent implements OnInit {
   @Select(AdditionalInfoState.getAdditionalInfo) additionalInfo$!: Observable<string[]>;
+  @Select(AdditionalInfoState.getNewPosition) newPosition$!: Observable<string>;
 
   constructor() {}
 
   ngOnInit(): void {
-    
   }
 }
