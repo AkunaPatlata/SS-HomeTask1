@@ -24,6 +24,5 @@
 </div>
 
 <div fxShow.xs fxShow.sm fxHide>
-  <!-- Providing a default value for newPosition in case it's null -->
   <app-card-small [additionalInfo]="(additionalInfo$ | async) || []" [newPosition]="(newPosition$ | async) || 'Default Position'"></app-card-small>
 </div>
