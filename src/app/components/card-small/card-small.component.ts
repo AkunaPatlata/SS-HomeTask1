@@ -10,6 +10,7 @@ import { AdditionalInfoState } from '../../states/additional-info.state';
 })
 export class CardSmallComponent {
   @Select(AdditionalInfoState.getAdditionalInfo) additionalInfo$!: Observable<string[]>;
+  @Select(AdditionalInfoState.getNewPosition) newPosition$!: Observable<string>;
 
   constructor() {}
 
