@@ -1,9 +1,9 @@
-<div class="card">
+<div fxHide.xs fxHide.sm>
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Max Dvorak</mat-card-title>
-      <mat-card-subtitle>{{ newPosition$ | async }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ (newPosition$ | async) || 'Default Position' }}</mat-card-subtitle>
     </mat-card-header>
     <img src="../../../assets/my-photo.jpg" alt="photo">
     <mat-card-content class="card-content">
@@ -11,7 +11,7 @@
         So, my name is Max. I'm a citizen of a beautiful city Rivne. I'm a student of National University of Water and Environmental Engineering.
         I'm very friendly and outgoing person. I love to play and watch football, to play chess, and i'm also a big fan of cardboard games. And i also play drums.
       </p>
-      <p *ngFor="let info of additionalInfo$ | async">{{ info }}</p>
+      <p *ngFor="let info of (additionalInfo$ | async) || []">{{ info }}</p>
     </mat-card-content>
     <a href="https://www.instagram.com/max.dvorak/" target="_blank" rel="noopener noreferrer" class="link-insta">
       <button mat-icon-button > 
@@ -21,4 +21,9 @@
       </button>
     </a>
   </mat-card>
+</div>
+
+<div fxShow.xs fxShow.sm fxHide>
+  <!-- Providing a default value for newPosition in case it's null -->
+  <app-card-small [additionalInfo]="(additionalInfo$ | async) || []" [newPosition]="(newPosition$ | async) || 'Default Position'"></app-card-small>
 </div>

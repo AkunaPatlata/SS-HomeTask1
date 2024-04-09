@@ -1,7 +1,4 @@
-import { Component } from '@angular/core';
-import { Select } from '@ngxs/store';
-import { Observable } from 'rxjs';
-import { AdditionalInfoState } from '../../states/additional-info.state';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-small',
@@ -9,11 +6,9 @@ import { AdditionalInfoState } from '../../states/additional-info.state';
   styleUrls: ['./card-small.component.scss']
 })
 export class CardSmallComponent {
-  @Select(AdditionalInfoState.getAdditionalInfo) additionalInfo$!: Observable<string[]>;
-  @Select(AdditionalInfoState.getNewPosition) newPosition$!: Observable<string>;
+  @Input() additionalInfo: string[] = [];
+  @Input() newPosition: string = '';
 
   constructor() {}
-
-  ngOnInit(): void {
-  }
 }
+
