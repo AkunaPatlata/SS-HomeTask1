@@ -12,14 +12,14 @@
         I'm very friendly and outgoing person. I love to play and watch football, to play chess, and i'm also a big fan of cardboard games. And i also play drums.
       </p>
       <p *ngFor="let info of (additionalInfo$ | async) || []">{{ info }}</p>
-    </mat-card-content>
-    <a href="https://www.instagram.com/max.dvorak/" target="_blank" rel="noopener noreferrer" class="link-insta">
-      <button mat-icon-button > 
+      <button mat-icon-button class="insta-button"> 
+        <a href="https://www.instagram.com/max.dvorak/" target="_blank" rel="noopener noreferrer">
         <mat-icon>
           <img class="image-inst" src="https://www.svgrepo.com/show/308994/instagram-social-media.svg" alt="insta">
         </mat-icon>
+        </a>
       </button>
-    </a>
+    </mat-card-content>
   </mat-card>
 </div>
 
