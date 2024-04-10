@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { Store } from '@ngxs/store';
 import { AddAdditionalInfo } from '../../states/additional-info.actions';
 import { AddNewPosition } from '../../states/additional-info.actions';
@@ -14,16 +19,16 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'edit-page',
   templateUrl: './edit-page.component.html',
-  styleUrls: ['./edit-page.component.scss']
+  styleUrls: ['./edit-page.component.scss'],
 })
 export class EditPageComponent {
   form: FormGroup;
-  matcher = new MyErrorStateMatcher(); 
+  matcher = new MyErrorStateMatcher();
 
   constructor(private store: Store, private fb: FormBuilder) {
     this.form = this.fb.group({
       info: ['', [Validators.required, Validators.minLength(10)]],
-      position: ['',[Validators.required, Validators.minLength(5)]]
+      position: ['', [Validators.required, Validators.minLength(5)]],
     });
   }
 

@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Select } from '@ngxs/store';
+import { AdditionalInfoService } from '../../states/additional-info.service';
 import { Observable } from 'rxjs';
-import { AdditionalInfoState } from '../../states/additional-info.state';
 
 @Component({
   selector: 'app-card-basic',
   templateUrl: './card-basic.component.html',
-  styleUrls: ['./card-basic.component.scss']
+  styleUrls: ['./card-basic.component.scss'],
 })
 export class CardBasicComponent implements OnInit {
-  @Select(AdditionalInfoState.getAdditionalInfo) additionalInfo$!: Observable<string[]>;
-  @Select(AdditionalInfoState.getNewPosition) newPosition$!: Observable<string>;
+  additionalInfo$!: Observable<string[]>;
+  newPosition$!: Observable<string>;
 
-  constructor() {}
+  constructor(private additionalInfoService: AdditionalInfoService) {}
 
   ngOnInit(): void {
+    this.additionalInfo$ = this.additionalInfoService.additionalInfo$;
+    this.newPosition$ = this.additionalInfoService.newPosition$;
   }
 }
